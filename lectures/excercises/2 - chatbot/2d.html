@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>2D - Excercise</title>
+  </head>
+
+  <body>
+
+    <div id="box">
+
+    </div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      const LoginForm = () => {
+        return(
+          <>
+            <div>
+                <input placeholder="Email"/>
+              </div>
+            <div>
+              <input placeholder="Password" type="password"/>
+            </div>
+            <button>Login</button>
+            <button>Sign Up</button>
+          </>
+        )
+      };
+
+      const App = () => {
+        return (
+          <>
+            <p>Hello, Welcome to my Website.</p>
+            <LoginForm />
+          </>
+        )
+      };
+
+      const box = document.getElementById('box')
+      ReactDOM.createRoot(box).render(<App />)
+
+    </script>
+    
+  </body>
+
+</html>
