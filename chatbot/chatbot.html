@@ -28,6 +28,16 @@
       //creating a chat message element
       const ChatMessage = (props) => {
         const message = props.message
+        const sender = props.sender
+
+        if (sender === 'robot'){
+            return(
+              <div>
+                <img src="asset/user.png" alt="User Profile" width="45"/>
+                {message} 
+              </div>
+          )
+        };
 
         return(
           <div>
@@ -41,8 +51,10 @@
       const app = (
         <>
           <ChatInput />
-          <ChatMessage message="hello Chatbot"/>
-          <ChatMessage message="Hello! How can I help you?"/>
+          <ChatMessage message="hello Chatbot" sender="user"/>
+          <ChatMessage message="Hello! How can I help you?" sender="robot"/>
+          <ChatMessage message="Can you get me today's date?" sender="user"/>
+          <ChatMessage message="Today is January 2" sender="robot"/>
         </>
       );
 
