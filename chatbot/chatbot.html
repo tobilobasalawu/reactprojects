@@ -27,17 +27,16 @@
 
       //creating a chat message element
       const ChatMessage = (props) => {
-        const message = props.message
-        const sender = props.sender
+        const { message, sender } = props;
 
         if (sender === 'robot'){
             return(
               <div>
-                <img src="asset/user.png" alt="User Profile" width="45"/>
+                <img src="asset/robot.png" alt="Robot Profile" width="45"/>
                 {message} 
               </div>
           )
-        };
+        }
 
         return(
           <div>
