@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>1A - React Basics</title>
+  </head>
+
+  <body>
+
+    <div class="box"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+
+      const name = 'Tobi';
+      const paragraph = <p>My name is {name}</p>
+
+      const box = document.querySelector('.box');
+      ReactDOM.createRoot(box).render(paragraph);
+
+    </script>
+
+  </body>
+
+</html>
+
