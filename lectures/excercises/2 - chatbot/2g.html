@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>2G - Excercise</title>
+  </head>
+
+  <body>
+
+    <div id="box">
+
+    </div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+
+      const ProductDetails = ({ text, price, discountPrice}) => {
+        return(
+          <>
+            <p>{text}</p>
+            <p>Price: ${price}</p>
+            {discountPrice && <p>Discount price: ${discountPrice}</p>}
+            <button>Add to Cart</button>
+          </>
+        )
+      };
+
+      const App = () => {
+        return(
+          <>
+            <ProductDetails text='Cotton Socks' price='10.90' discountPrice='5.45'/>
+            <ProductDetails text='Tennis balls' price='6.00'/>
+            <ProductDetails text='Plain T-shirt' price='7.99'/>
+          </>
+        )
+      }
+
+      const box = document.getElementById('box')
+      ReactDOM.createRoot(box).render(<App />)
+
+    </script>
+    
+  </body>
+
+</html>
