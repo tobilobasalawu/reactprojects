@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>2E - Excercise</title>
+  </head>
+
+  <body>
+
+    <div id="box">
+
+    </div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+
+      const App = () => {
+        return(
+          <>
+            <p>Cotton Socks</p>
+            <p>Price: $10.90</p>
+            <button>Add to Cart</button>
+          </>
+        )
+      }
+
+      const box = document.getElementById('box')
+      ReactDOM.createRoot(box).render(<App />)
+
+    </script>
+    
+  </body>
+
+</html>
