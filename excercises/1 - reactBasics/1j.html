@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>1J - React Basics</title>
+  </head>
+
+  <body>
+
+    <div id="box"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script type="text/babel">
+      const box = document.querySelector('#box')
+      const root = ReactDOM.createRoot(box)
+
+      setInterval(() => {
+        const para = 
+        <p>Current Time(London): 
+          <h2>{dayjs().format('HH:mm:ss')}</h2>
+        </p>;
+
+        root.render(para);
+      }, 1000);
+
+    </script>
+
+  </body>
+
+</html>
+
