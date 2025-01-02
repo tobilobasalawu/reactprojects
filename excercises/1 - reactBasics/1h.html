@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>1H - React Basics</title>
+  </head>
+
+  <body>
+
+    <div id="box"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script type="text/babel">
+
+      const box = document.getElementById('box')
+
+      const date = dayjs().format('MMMM D')
+      const result = (
+        <p>Today is {date}</p>
+      );
+      console.log(`${date}`)
+
+      ReactDOM.createRoot(box).render(result);
+
+    </script>
+
+  </body>
+
+</html>
+
