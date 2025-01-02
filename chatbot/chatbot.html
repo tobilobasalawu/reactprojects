@@ -19,7 +19,10 @@
       const ChatInput = () => {
         return (
           <>
-            <input placeholder="Send a message to Chatbot" size="30"/>
+            <input 
+              placeholder="Send a message to Chatbot" 
+              size="30"
+            />
             <button>Send</button>
           </>
         );
@@ -46,26 +49,43 @@
 
         return(
           <div>
-            { sender === 'robot' && <img src="asset/robot.png" alt="Robot Profile" width="45"/>} 
+            { sender === 'robot' && (
+              <img src="asset/robot.png" alt="Robot Profile" width="45" />
+            )} 
             {message} 
-            {sender != 'robot' && <img src="asset/user.png" alt="User Profile" width="45"/>}
+            {sender != 'robot' && (
+              <img src="asset/user.png" alt="User Profile" width="45" />
+            )}
           </div>
         )
       };
 
-
-      const app = (
-        <>
-          <ChatInput />
-          <ChatMessage message="hello Chatbot" sender="user"/>
-          <ChatMessage message="Hello! How can I help you?" sender="robot"/>
-          <ChatMessage message="Can you get me today's date?" sender="user"/>
-          <ChatMessage message="Today is January 2" sender="robot"/>
-        </>
-      );
+      const App = () =>{
+        return(
+          <>
+            <ChatInput />
+            <ChatMessage 
+              message="hello Chatbot" 
+              sender="user"
+            />
+            <ChatMessage 
+              message="Hello! How can I help you?" 
+              sender="robot"
+            />
+            <ChatMessage  
+              message="Can you get me today's date?" 
+              sender="user"
+            />
+            <ChatMessage 
+              message="Today is January 2" 
+              sender="robot"
+            />
+          </>
+        );
+      }
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(app);
+      ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
 </html>
