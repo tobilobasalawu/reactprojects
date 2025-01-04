@@ -88,17 +88,20 @@
             sender: 'robot',
             id: 'id6'        
           }
-        ];  
+        ]; 
+
+        
         
         return (
           <>
-              {
-                  chatMessages.map((chatMessage) => {
-                  return(
-                    <ChatMessage message={chatMessage.message} sender={chatMessage.sender} key={chatMessage.id}/>
-                  )
-                })
-              }
+            <button onClick={}>Send Message</button>
+            {
+                chatMessages.map((chatMessage) => {
+                return(
+                  <ChatMessage message={chatMessage.message} sender={chatMessage.sender} key={chatMessage.id}/>
+                )
+              })
+            }
           </>
         )
 
